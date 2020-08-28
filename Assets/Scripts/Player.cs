@@ -6,10 +6,14 @@ public class Player : MonoBehaviour
 {
     // Useful when not using a Rigidbody
     CharacterController characterController;
+    public Camera playerCamera;
     public float speed = 5f;
     public float jumpVelocity = 5f;
     private float gravity = -9.81f;
     Vector3 playerVelocity;
+	public float mouseSensitivity = 5.0f;
+	float verticalRotation = 0;
+	public float upDownRange = 60.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -38,25 +42,26 @@ public class Player : MonoBehaviour
             playerVelocity.y += gravity * Time.deltaTime;
         }
         
-        // Get movement input
-        var horizontalInput = Input.GetAxis("Horizontal");
-        var verticalInput = Input.GetAxis("Vertical");
+        // Mouse input
+		float rotLeftRight = Input.GetAxis("Mouse X") * mouseSensitivity;
+		transform.Rotate(0, rotLeftRight, 0);
 
-        playerVelocity.x = horizontalInput;
-        playerVelocity.z = verticalInput;
+		verticalRotation -= Input.GetAxis("Mouse Y") * mouseSensitivity;
+		verticalRotation = Mathf.Clamp(verticalRotation, -upDownRange, upDownRange);
+		playerCamera.transform.localRotation = Quaternion.Euler(verticalRotation, 0, 0);
 
-        // Store the character's movement for multiple uses
-        var characterMovement = new Vector3(playerVelocity.x, 0, playerVelocity.z);
+        // Movement input
+        var strafeInput = Input.GetAxis("Horizontal");
+        var forwardInput = Input.GetAxis("Vertical");
 
-        // Move the character
-        characterController.Move(characterMovement * speed * Time.deltaTime);
+        playerVelocity.x = strafeInput * speed;
+        playerVelocity.z = forwardInput * speed;
 
-        // If the character moved, face them in the appropriate direction
-        if(characterMovement != Vector3.zero) {
-            transform.forward = characterMovement;
-        }
-
-        // Apply gravity
-        characterController.Move(new Vector3(0, playerVelocity.y, 0) * Time.deltaTime);
+        // Make it so
+		Vector3 movement = new Vector3(playerVelocity.x, playerVelocity.y, playerVelocity.z);
+		
+		movement = transform.rotation * movement;
+		
+		characterController.Move(movement * Time.deltaTime);
     }
 }
