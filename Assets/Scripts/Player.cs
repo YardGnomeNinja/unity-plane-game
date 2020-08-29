@@ -26,7 +26,8 @@ public class Player : MonoBehaviour
     void Update()
     {
         // Calculate Gravity
-        if(characterController.isGrounded) {
+        if(characterController.isGrounded)
+        {
             // If the character is on the ground, continue to apply downward force to keep them there
             playerVelocity.y = -1;
 
