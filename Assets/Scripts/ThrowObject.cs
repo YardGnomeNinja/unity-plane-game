@@ -20,6 +20,7 @@ public class ThrowObject : MonoBehaviour
     private void OnTriggerStay(Collider other) {
         if (other.CompareTag("hand")) {
             targetedByPlayer = other.gameObject.GetComponentInParent<Player>();
+            Debug.Log(targetedByPlayer);
         }  
     }
 
@@ -32,7 +33,6 @@ public class ThrowObject : MonoBehaviour
 
     void Update()
     {
-        //Debug.Log(targetedByPlayer);
         if (targetedByPlayer != null) {
             float dist = Vector3.Distance(gameObject.transform.position, targetedByPlayer.transform.position);
             Debug.Log(dist);

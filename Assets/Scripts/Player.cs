@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using MLAPI;
+using ExtensionMethods;
 
 public class Player : MonoBehaviour
 {
     // Useful when not using a Rigidbody
     CharacterController characterController;
+    NetworkedObject networkedObject;
     public Camera playerCamera;
     public float speed = 5f;
     public float jumpVelocity = 5f;
@@ -13,12 +16,30 @@ public class Player : MonoBehaviour
     Vector3 playerVelocity;
 	public float mouseSensitivity = 5.0f;
 	float verticalRotation = 0;
-	public float upDownRange = 60.0f;
+	public float upDownRange = 80.0f;
 
     // Start is called before the first frame update
     void Start()
     {
+        // In the event any gameObject in the Player's hierarchy was disabled, reenable them
+        //gameObject.SetActiveRecursivelyExt(true);
+
         characterController = GetComponent<CharacterController>();
+        networkedObject = GetComponent<NetworkedObject>();
+        //playerCamera = (Camera)GameObject.FindObjectOfType<Camera>();
+        
+        foreach (Camera camera in Resources.FindObjectsOfTypeAll(typeof(Camera)))
+        {
+            if (camera.transform.parent == networkedObject.transform)
+            {
+                playerCamera = camera;
+                playerCamera.gameObject.SetActive(true);
+            }
+            else 
+            {
+                camera.gameObject.SetActive(false);
+            }
+        }
     }
 
     // Update is called once per frame
