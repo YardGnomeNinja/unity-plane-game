@@ -10,7 +10,7 @@ Tools/Supplies
  - rivet puller
  - sheet aluminum
  - aluminum shaping
-  - break
+    - break
   - roller
   - shear (or hand equivalent)
   - hammers + bag
