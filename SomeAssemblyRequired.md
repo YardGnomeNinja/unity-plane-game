@@ -24,6 +24,7 @@ Tools/Supplies
  - piano hinge
  - Ceconite and related tools/supplies (opt. fabric covering)
  - Chromoly tube + welding (opt. tube constr.)
+
 Sub-Assemblies
  - Fuselage
     - n stations
