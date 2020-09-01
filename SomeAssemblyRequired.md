@@ -11,9 +11,9 @@ Tools/Supplies
  - sheet aluminum
  - aluminum shaping
     - break
-  - roller
-  - shear (or hand equivalent)
-  - hammers + bag
+    - roller
+    - shear (or hand equivalent)
+    - hammers + bag
  - paint/primer
  - wire
  - connectors
@@ -26,55 +26,55 @@ Tools/Supplies
  - Chromoly tube + welding (opt. tube constr.)
 Sub-Assemblies
  - Fuselage
-  - n stations
-  - bulkheads
+    - n stations
+    - bulkheads
  - Horizontal Stab
-  - spar
-  - skin
-  - elevator
-  - countweight
+    - spar
+    - skin
+    - elevator
+    - countweight
  - Vertical Stab
-  - spar
-  - skin
-  - rudder
-  - strobe
+    - spar
+    - skin
+    - rudder
+    - strobe
  - Wings (ea)
-  - spar
-  - skin
-  - ailerons
-  - flaps
+    - spar
+    - skin
+    - ailerons
+    - flaps
   - landing gear
-   - tires
-   - wheels
-   - brakes
-   - hydraulic lines
-   - struts
-   - nav + landing lights
+     - tires
+     - wheels
+     - brakes
+     - hydraulic lines
+     - struts
+     - nav + landing lights
  - Engine
-  - Carb of FI
-  - Magnetos x2
-  - Cylinders
-  - Spark plugs (2x cylinders)
-  - spark plug wires
-  - pistons
-  - push rods
-  - rockers
-  - valves and springs
-  - crank
-  - cam
-  - prop
+    - Carb of FI
+    - Magnetos x2
+    - Cylinders
+    - Spark plugs (2x cylinders)
+    - spark plug wires
+    - pistons
+    - push rods
+    - rockers
+    - valves and springs
+    - crank
+    - cam
+    - prop
  - Cockpit
-  - basic instruments
-  - pitot/static lines
-  - controls
-   - yokes
-   - rudder pedals
-   - flap handle
-   - brake master cylinders
-   - parking break
-  - switches
-  - radios? (and antenna)
-  - panel itself
-  - seats
-  - seat belts
-  - windows
+    - basic instruments
+    - pitot/static lines
+    - controls
+       - yokes
+       - rudder pedals
+       - flap handle
+       - brake master cylinders
+       - parking break
+      - switches
+    - radios? (and antenna)
+    - panel itself
+    - seats
+    - seat belts
+    - windows
