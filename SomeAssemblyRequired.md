@@ -1,0 +1,80 @@
+Tools/Supplies
+ - wrenches
+ - AN Hardware
+ - screw drivers
+ - drill
+ - safety wire pullers
+ - rivet gun and bucking bar
+ - rivets (std. and counter sunk)
+ - compressed air
+ - rivet puller
+ - sheet aluminum
+ - aluminum shaping
+  - break
+  - roller
+  - shear (or hand equivalent)
+  - hammers + bag
+ - paint/primer
+ - wire
+ - connectors
+ - crimp pliers or solder
+ - fuel tube and fittings
+ - adel clamps
+ - control cables
+ - piano hinge
+ - Ceconite and related tools/supplies (opt. fabric covering)
+ - Chromoly tube + welding (opt. tube constr.)
+Sub-Assemblies
+ - Fuselage
+  - n stations
+  - bulkheads
+ - Horizontal Stab
+  - spar
+  - skin
+  - elevator
+  - countweight
+ - Vertical Stab
+  - spar
+  - skin
+  - rudder
+  - strobe
+ - Wings (ea)
+  - spar
+  - skin
+  - ailerons
+  - flaps
+  - landing gear
+   - tires
+   - wheels
+   - brakes
+   - hydraulic lines
+   - struts
+   - nav + landing lights
+ - Engine
+  - Carb of FI
+  - Magnetos x2
+  - Cylinders
+  - Spark plugs (2x cylinders)
+  - spark plug wires
+  - pistons
+  - push rods
+  - rockers
+  - valves and springs
+  - crank
+  - cam
+  - prop
+ - Cockpit
+  - basic instruments
+  - pitot/static lines
+  - controls
+   - yokes
+   - rudder pedals
+   - flap handle
+   - brake master cylinders
+   - parking break
+  - switches
+  - radios? (and antenna)
+  - panel itself
+  - seats
+  - seat belts
+  - windows
