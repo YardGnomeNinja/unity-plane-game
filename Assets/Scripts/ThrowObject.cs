@@ -5,7 +5,7 @@ public class ThrowObject : MonoBehaviour
 {
     private Player targetedByPlayer;
     public float throwForce = 10f;
-    bool hasPlayer = false;
+    bool playerInRange = false;
     bool beingCarried = false;
     // public AudioClip[] soundToPlay;
     // private AudioSource audio;
@@ -17,11 +17,13 @@ public class ThrowObject : MonoBehaviour
         // audio = GetComponent<AudioSource>();
     }
 
-    private void OnTriggerStay(Collider other) {
-        if (other.CompareTag("hand")) {
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("hand"))
+        {
             targetedByPlayer = other.gameObject.GetComponentInParent<Player>();
-            Debug.Log(targetedByPlayer);
-        }  
+            // Debug.Log(targetedByPlayer);
+        }
     }
 
     // private void OnTriggerExit(Collider other) {
@@ -33,27 +35,29 @@ public class ThrowObject : MonoBehaviour
 
     void Update()
     {
-        if (targetedByPlayer != null) {
+        if (targetedByPlayer != null)
+        {
             float dist = Vector3.Distance(gameObject.transform.position, targetedByPlayer.transform.position);
-            Debug.Log(dist);
             if (dist <= 2.5f)
             {
-                hasPlayer = true;
+                playerInRange = true;
             }
             else
             {
-                hasPlayer = false;
+                playerInRange = false;
             }
-            
-            if (hasPlayer && Input.GetKeyDown(KeyCode.E))
+
+            if (!beingCarried)
             {
-                Debug.Log("Yoink");
-                GetComponent<Rigidbody>().isKinematic = true;
-                transform.parent = targetedByPlayer.playerCamera.transform;
-                beingCarried = true;
+                if (playerInRange && Input.GetKeyDown(KeyCode.E))
+                {
+                    Debug.Log("Yoink");
+                    GetComponent<Rigidbody>().isKinematic = true;
+                    transform.parent = targetedByPlayer.playerCamera.transform;
+                    beingCarried = true;
+                }
             }
-            
-            if (beingCarried)
+            else
             {
                 // if (touched)
                 // {
@@ -74,6 +78,14 @@ public class ThrowObject : MonoBehaviour
                 }
                 else if (Input.GetMouseButtonDown(1))
                 {
+                    GetComponent<Rigidbody>().isKinematic = false;
+                    transform.parent = null;
+                    beingCarried = false;
+                }
+
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    Debug.Log("Knioy");
                     GetComponent<Rigidbody>().isKinematic = false;
                     transform.parent = null;
                     beingCarried = false;
